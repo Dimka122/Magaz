@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace Magaz
 {
@@ -20,9 +21,15 @@ namespace Magaz
     /// </summary>
     public partial class MainWindow : Window
     {
+        northwind context = new northwind();
+        CollectionViewSource custViewSource;
+        CollectionViewSource ordViewSource;
         public MainWindow()
         {
             InitializeComponent();
+            custViewSource = ((CollectionViewSource)(FindResource("customerViewSource")));
+            ordViewSource = ((CollectionViewSource)(FindResource("customerOrdersViewSource")));
+            DataContext = this;
         }
     }
 }
