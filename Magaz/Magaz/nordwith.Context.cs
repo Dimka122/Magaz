@@ -13,10 +13,10 @@ namespace Magaz
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class northwind : DbContext
+    public partial class NorthwindEntities : DbContext
     {
-        public northwind()
-            : base("name=northwind")
+        public NorthwindEntities()
+            : base("name=NorthwindEntities")
         {
         }
     

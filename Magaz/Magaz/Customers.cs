@@ -10,14 +10,14 @@
 namespace Magaz
 {
     using System;
-    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     
     public partial class Customers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customers()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Orders = new ObservableCollection<Orders>();
         }
     
         public string CustomerID { get; set; }
@@ -33,6 +33,6 @@ namespace Magaz
         public string Fax { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ObservableCollection<Orders> Orders { get; set; }
     }
 }

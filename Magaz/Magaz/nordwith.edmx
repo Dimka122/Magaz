@@ -167,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="northwind" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NorthwindEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Order_Details" EntityType="Self.Order_Details" />
           <EntitySet Name="Orders" EntityType="Self.Orders" />
@@ -185,7 +185,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище NorthwindModelContainer" CdmEntityContainer="northwind">
+        <EntityContainerMapping StorageEntityContainer="Хранилище NorthwindModelContainer" CdmEntityContainer="NorthwindEntities">
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="NorthwindModel.Customers">
               <MappingFragment StoreEntitySet="Customers">
